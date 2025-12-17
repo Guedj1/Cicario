@@ -1,1 +1,50 @@
+// js/main.js - REMPLACEZ TOUT LE FICHIER
 
+// Chargement du DOM
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Site chargé avec succès !');
+    
+    // Exemple : Gestion d'un formulaire
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleSubmit);
+    }
+    
+    // Exemple : Menu mobile
+    const menuToggle = document.getElementById('menuToggle');
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMenu);
+    }
+});
+
+// Fonction pour gérer la soumission du formulaire
+function handleSubmit(event) {
+    event.preventDefault();
+    console.log('Formulaire soumis');
+    
+    // Récupérer les données du formulaire
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+    
+    // Envoyer via EmailJS
+    sendEmail(formData)
+        .then(response => {
+            alert('Message envoyé avec succès !');
+            event.target.reset();
+        })
+        .catch(error => {
+            console.error('Erreur:', error);
+            alert('Une erreur est survenue. Veuillez réessayer.');
+        });
+}
+
+// Fonction pour le menu mobile
+function toggleMenu() {
+    const menu = document.getElementById('mainMenu');
+    if (menu) {
+        menu.classList.toggle('active');
+    }
+}
