@@ -6,7 +6,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Importer le CSS des témoignages */
+@import url('testimonials.css');
 /* Styles de base */
 body {
     font-family: 'Arial', sans-serif;
