@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Cicario | Digitalisation & Automatisation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 80px;
+            background-color: #f8f9fa;
+        }
+        .hero-faq {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .accordion-button {
+            font-weight: 600;
+            padding: 1rem 1.25rem;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #e3f2fd;
+            color: var(--primary-color);
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            border: none;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        .contact-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (identique à votre site principal) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://guedj1.github.io/Cicario/">
+                <i class="fas fa-robot me-2"></i>CICARIO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://guedj1.github.io/Cicario/#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://guedj1.github.io/Cicario/#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://guedj1.github.io/Cicario/#offres">Offres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://guedj1.github.io/Cicario/#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête FAQ -->
+    <section class="hero-faq">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-3">Foire Aux Questions</h1>
+            <p class="lead">Trouvez rapidement des réponses aux questions les plus fréquentes sur nos services.</p>
+        </div>
+    </section>
+
+    <!-- Section FAQ Accordéon -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="faqAccordion">
+
+                        <!-- Question 1 -->
+                        <div class="accordion-item mb-3 border rounded-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                                    <i class="fas fa-rocket me-2 text-primary"></i> Que faites-vous exactement ?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Cicario digitalise et automatise les processus des PME.</strong> Nous créons des chatbots, automatisons vos tâches répétitives (emails, prises de RDV) et connectons vos outils pour vous faire <strong>gagner +10h/semaine</strong>.</p>
+                                    <a href="https://guedj1.github.io/Cicario/#services" class="btn btn-outline-primary btn-sm me-2">Voir nos services</a>
+                                    <a href="https://wa.me/221761642285?text=Bonjour,%20je%20découvre%20vos%20services.%20Pouvons-nous%20en%20parler%20?" class="btn btn-whatsapp btn-sm">Discuter de mon projet</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="accordion-item mb-3 border rounded-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <i class="fas fa-money-bill-wave me-2 text-primary"></i> Combien ça coûte ?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Nos formules vont de 25 000 à 45 000 FCFA/mois</strong>, avec des devis sur mesure. Le prix dépend de la complexité de vos processus à automatiser. Pour une estimation précise et gratuite :</p>
+                                    <a href="https://wa.me/221761642285?text=Bonjour,%20je%20voudrais%20une%20estimation%20pour%20automatiser%20[mon%20processus]" class="btn btn-whatsapp">Demander un audit gratuit</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="accordion-item mb-3 border rounded-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <i class="fas fa-video me-2 text-primary"></i> Avez-vous une démo ou un essai ?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Pas de démo standard, mais un audit personnalisé gratuit.</strong> Nos solutions étant sur mesure, nous préférons analyser <strong>VOS processus</strong> et vous montrer des cas concrets similaires lors d'un appel découverte.</p>
+                                    <a href="https://wa.me/221761642285?text=Bonjour,%20je%20suis%20intéressé%20par%20l'audit%20gratuit%20Cicario" class="btn btn-whatsapp">Planifier mon audit (20 min)</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="accordion-item mb-3 border rounded-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <i class="fab fa-whatsapp me-2 text-primary"></i> Ça marche avec WhatsApp ?
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Oui, c'est une de nos spécialités !</strong> Nous intégrons des chatbots et des automatisations directement dans WhatsApp Business. Vos clients vous contactent et sont pris en charge 24h/24, même en dehors des heures d'ouverture.</p>
+                                    <a href="https://wa.me/221761642285?text=Bonjour,%20je%20veux%20automatiser%20mon%20WhatsApp%20Business.%20Pouvez-vous%20m'aider%20?" class="btn btn-whatsapp">Voir des exemples WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="accordion-item mb-3 border rounded-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    <i class="fas fa-clock me-2 text-primary"></i> Quel est le délai de mise en place ?
+                                </button>
+                            </h3>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Un premier chatbot basique peut être livré en 3-5 jours ouvrés.</strong> Pour des projets d'automatisation plus complexes, nous établissons un calendrier détaillé après l'audit initial pour respecter vos délais.</p>
+                                    <a href="https://wa.me/221761642285?text=Bonjour,%20j'aimerais%20connaître%20les%20délais%20pour%20[mon%20projet]" class="btn btn-whatsapp">Discuter des délais de mon projet</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 6 -->
+                        <div class="accordion-item mb-3 border rounded-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    <i class="fas fa-code me-2 text-primary"></i> Avez-vous des exemples ou un portfolio ?
+                                </button>
+                            </h3>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Oui, vous pouvez consulter notre dépôt GitHub</strong> qui contient des exemples de code et la structure de projets : <a href="https://github.com/Guedj1/Cicario" target="_blank">github.com/Guedj1/Cicario</a>. Pour des <strong>études de cas détaillées avec résultats chiffrés</strong>, discutons-en directement.</p>
+                                    <a href="https://wa.me/221761642285?text=Bonjour,%20je%20voudrais%20voir%20des%20cas%20clients%20concrets%20de%20digitalisation" class="btn btn-whatsapp">Voir des études de cas</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 7 -->
+                        <div class="accordion-item mb-3 border rounded-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                    <i class="fas fa-cogs me-2 text-primary"></i> Faut-il des compétences techniques pour utiliser vos solutions ?
+                                </button>
+                            </h3>
+                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Aucune compétence technique n'est requise de votre côté.</strong> Nous nous occupons de toute l'installation, la configuration et nous vous formons à utiliser des interfaces simples de gestion. Vous pilotez tout sans écrire une ligne de code.</p>
+                                    <a href="https://wa.me/221761642285?text=Bonjour,%20j'ai%20une%20question%20sur%20la%20facilité%20d'utilisation%20de%20vos%20solutions" class="btn btn-whatsapp">Poser une question technique</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 8 -->
+                        <div class="accordion-item mb-3 border rounded-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                    <i class="fas fa-headset me-2 text-primary"></i> Proposez-vous un support après la mise en place ?
+                                </button>
+                            </h3>
+                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Un support est inclus dans toutes nos formules</strong>, avec des niveaux variables (email, prioritaire ou 24/7). Nous garantissons un temps de réponse rapide et une résolution efficace des problèmes pour assurer la continuité de votre service.</p>
+                                    <a href="https://guedj1.github.io/Cicario/#offres" class="btn btn-outline-primary btn-sm me-2">Comparer les offres</a>
+                                    <a href="https://wa.me/221761642285?text=Bonjour,%20j'ai%20une%20question%20sur%20le%20support%20technique" class="btn btn-whatsapp btn-sm">Contacter le support</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- Fin de l'accordéon -->
+
+                    <!-- Encadré de contact -->
+                    <div class="contact-box text-center">
+                        <h4><i class="fas fa-question-circle me-2 text-primary"></i> Vous ne trouvez pas votre réponse ?</h4>
+                        <p class="mb-4">Notre équipe est disponible pour répondre à toutes vos questions personnalisées.</p>
+                        <a href="https://wa.me/221761642285?text=Bonjour%20Cicario,%20j'ai%20une%20question%20spécifique%20:" class="btn btn-whatsapp btn-lg me-3">
+                            <i class="fab fa-whatsapp me-2"></i>Poser une question sur WhatsApp
+                        </a>
+                        <a href="https://guedj1.github.io/Cicario/#contact" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Utiliser le formulaire de contact
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page (simplifié) -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 Cicario. Tous droits réservés. | <a href="https://guedj1.github.io/Cicario/" class="text-light text-decoration-underline">Retour au site principal</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script Tawk.to (optionnel, si vous voulez le chat sur cette page) -->
+    <!-- <script type="text/javascript"> ... votre code Tawk.to ... </script> -->
+</body>
+</html>
