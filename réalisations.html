@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Réalisations - Cicario | Cas Clients</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 80px;
+            color: #333;
+        }
+        .hero-realisations {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0 60px;
+            margin-bottom: 50px;
+        }
+        .case-study-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 40px;
+            height: 100%;
+        }
+        .case-study-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        .case-header {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        .client-logo {
+            height: 60px;
+            width: auto;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
+        .stats-box {
+            background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 25px 0;
+        }
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        .badge-sector {
+            background-color: var(--accent-color);
+            color: white;
+            font-size: 0.8rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+        .process-step {
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        .step-number {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://guedj1.github.io/Cicario/">
+                <i class="fas fa-robot me-2"></i>CICARIO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://guedj1.github.io/Cicario/#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://guedj1.github.io/Cicario/#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://guedj1.github.io/Cicario/#offres">Offres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://guedj1.github.io/Cicario/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête -->
+    <section class="hero-realisations">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3">Nos Réalisations</h1>
+                    <p class="lead mb-0">Découvrez comment nous aidons des entreprises comme la vôtre à gagner du temps, réduire les coûts et augmenter leur productivité grâce à la digitalisation sur mesure.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <a href="https://wa.me/221761642285?text=Bonjour%20Cicario,%20je%20consulte%20vos%20réalisations.%20Pouvons-nous%20discuter%20d'un%20projet%20similaire%20?" class="btn btn-light btn-lg">
+                        <i class="fab fa-whatsapp me-2"></i>Votre projet ici
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cas Client 1 : Pharmacie -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="case-study-card">
+                        <div class="case-header">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <span class="badge-sector mb-3">SANTÉ & PHARMACIE</span>
+                                    <h3 class="mb-2">Automatisation du Support Client pour une Pharmacie</h3>
+                                    <p class="text-muted mb-0">Comment nous avons libéré 15h/semaine de temps employé en automatisant les questions récurrentes.</p>
+                                </div>
+                                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                                    <div class="d-inline-block bg-light p-3 rounded">
+                                        <p class="mb-1 small text-muted">Client :</p>
+                                        <p class="mb-0 fw-bold">Pharmacie du Plateau<br><small class="text-muted">Dakar, Sénégal</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 p-md-5">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h5 class="mb-3"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Le Défi</h5>
+                                    <ul class="mb-4">
+                                        <li class="mb-2">Le personnel passait <strong>plus de 3h par jour</strong> au téléphone à répondre aux mêmes questions (horaires, disponibilité des médicaments courants, prix).</li>
+                                        <li class="mb-2">Impossibilité de gérer les demandes en dehors des heures d'ouverture, entraînant une perte de clients potentiels.</li>
+                                        <li>Frustration des employés qui ne pouvaient se concentrer sur leur cœur de métier (conseil et préparation des ordonnances).</li>
+                                    </ul>
+
+                                    <h5 class="mb-3"><i class="fas fa-cogs text-primary me-2"></i>Notre Solution</h5>
+                                    <div class="process-step">
+                                        <p><span class="step-number">1</span> <strong>Diagnostic sur site</strong> : Identification des 20 questions les plus fréquentes.</p>
+                                    </div>
+                                    <div class="process-step">
+                                        <p><span class="step-number">2</span> <strong>Chatbot WhatsApp & Site Web</strong> : Déploiement d'un assistant conversationnel capable de répondre instantanément, 24h/24.</p>
+                                    </div>
+                                    <div class="process-step">
+                                        <p><span class="step-number">3</span> <strong>Tableau de bord de gestion</strong> : Interface simple pour mettre à jour les stocks et les prix en temps réel.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="stats-box">
+                                        <div class="row text-center">
+                                            <div class="col-6 border-end">
+                                                <div class="stat-number">-15h</div>
+                                                <p class="mb-0 small">Temps gagné / semaine</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="stat-number">+40%</div>
+                                                <p class="mb-0 small">de contacts traités hors ouverture</p>
+                                            </div>
+                                        </div>
+                                        <p class="mt-3 mb-0 small text-muted">Chiffres sur les 3 premiers mois.</p>
+                                    </div>
+
+                                    <h5 class="mb-3"><i class="fas fa-chart-line text-success me-2"></i>Résultats & Retour Client</h5>
+                                    <ul class="mb-4">
+                                        <li class="mb-2"><strong>Gain de productivité immédiat</strong> : Les employés réaffectent 15h/semaine à des tâches à plus forte valeur ajoutée.</li>
+                                        <li class="mb-2"><strong>Service amélioré</strong> : Les clients reçoivent une réponse instantanée, même à 22h, augmentant la satisfaction.</li>
+                                        <li class="mb-2"><strong>Réduction des erreurs</strong> : Les informations (prix, stocks) sont centralisées et toujours à jour.</li>
+                                        <li><strong>Scalabilité</strong> : La solution peut désormais gérer une augmentation du volume d'appels sans coût supplémentaire.</li>
+                                    </ul>
+
+                                    <div class="bg-light p-4 rounded border">
+                                        <p class="fst-italic mb-2">"Avant, notre standard était constamment saturé. Aujourd'hui, le chatbot gère 8 questions sur 10. Notre équipe est plus sereine et nos clients apprécient la réactivité, même le dimanche. L'investissement a été rentabilisé en moins de 2 mois."</p>
+                                        <p class="mb-0 fw-bold">— M. Diop, Gérant</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cas Client 2 : Auto-école -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="case-study-card">
+                        <div class="case-header">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <span class="badge-sector mb-3">FORMATION & AUTO-ÉCOLE</span>
+                                    <h3 class="mb-2">Digitalisation de la Prise de Rendez-vous pour une Auto-école</h3>
+                                    <p class="text-muted mb-0">Passage d'une gestion manuelle et chronophage à un système automatisé et fluide.</p>
+                                </div>
+                                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                                    <div class="d-inline-block bg-light p-3 rounded">
+                                        <p class="mb-1 small text-muted">Client :</p>
+                                        <p class="mb-0 fw-bold">Auto-École Excellence<br><small class="text-muted">Thiès, Sénégal</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 p-md-5">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h5 class="mb-3"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Le Défi</h5>
+                                    <ul class="mb-4">
+                                        <li class="mb-2">La secrétaire était débordée par la <strong>gestion manuelle des plannings</strong> de 5 moniteurs sur papier et par téléphone.</li>
+                                        <li class="mb-2">Nombreux <strong>conflits de rendez-vous et trous dans les emplois du temps</strong>, représentant une perte de revenus.</li>
+                                        <li>Processus d'inscription long et fastidieux pour les nouveaux élèves, nécessitant plusieurs allers-retours.</li>
+                                    </ul>
+
+                                    <h5 class="mb-3"><i class="fas fa-cogs text-primary me-2"></i>Notre Solution</h5>
+                                    <div class="process-step">
+                                        <p><span class="step-number">1</span> <strong>Calendrier intelligent en ligne</strong> : Synchronisation des disponibilités de chaque moniteur dans un agenda partagé.</p>
+                                    </div>
+                                    <div class="process-step">
+                                        <p><span class="step-number">2</span> <strong>Portail élève automatisé</strong> : Les élèves peuvent voir les créneaux, réserver et payer en ligne, et recevoir des rappels automatiques.</p>
+                                    </div>
+                                    <div class="process-step">
+                                        <p><span class="step-number">3</span> <strong>Formulaire d'inscription intelligent</strong> : Pré-qualification en ligne et envoi automatique du dossier à compléter.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="stats-box">
+                                        <div class="row text-center">
+                                            <div class="col-6 border-end">
+                                                <div class="stat-number">-80%</div>
+                                                <p class="mb-0 small">de temps de gestion administrative</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="stat-number">+25%</div>
+                                                <p class="mb-0 small">de capacité de réservation</p>
+                                            </div>
+                                        </div>
+                                        <p class="mt-3 mb-0 small text-muted">Chiffres sur les 2 premiers mois.</p>
+                                    </div>
+
+                                    <h5 class="mb-3"><i class="fas fa-chart-line text-success me-2"></i>Résultats & Retour Client</h5>
+                                    <ul class="mb-4">
+                                        <li class="mb-2"><strong>Optimisation des plannings</strong> : Remplissage optimal des créneaux des moniteurs, augmentation du chiffre d'affaires.</li>
+                                        <li class="mb-2"><strong>Zéro conflit de rendez-vous</strong> : Le système centralisé a éliminé les doubles réservations.</li>
+                                        <li class="mb-2"><strong>Expérience élève modernisée</strong> : Les nouveaux élèves peuvent s'inscrire et prendre un premier cours en 10 minutes, 7j/7.</li>
+                                        <li><strong>Délégation réussie</strong> : La secrétaire se concentre désormais sur l'accueil et le suivi qualité.</li>
+                                    </ul>
+
+                                    <div class="bg-light p-4 rounded border">
+                                        <p class="fst-italic mb-2">"Nous avions l'impression de courir après le temps. La solution de Cicario a structuré toute notre activité. Nous avons réduit les appels téléphoniques de 80% et nos moniteurs gagnent jusqu'à 2 heures de conduite par jour grâce à un planning optimisé. C'est un changement radical."</p>
+                                        <p class="mb-0 fw-bold">— Mme. Sarr, Directrice</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Prêt à obtenir des résultats similaires pour votre entreprise ?</h2>
+            <p class="lead mb-4">Chaque projet commence par un échange pour comprendre vos défis spécifiques.</p>
+            <a href="https://wa.me/221761642285?text=Bonjour%20Cicario,%20je%20suis%20impressionné%20par%20vos%20réalisations.%20Je%20voudrais%20discuter%20d'un%20projet%20pour%20mon%20entreprise." class="btn btn-whatsapp btn-lg me-3">
+                <i class="fab fa-whatsapp me-2"></i>Discuter de mon projet
+            </a>
+            <a href="https://guedj1.github.io/Cicario/#offres" class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-euro-sign me-2"></i>Voir nos offres
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Simplifié -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-robot me-2"></i>CICARIO</h5>
+                    <p class="mb-0 small">Digitalisation & Automatisation sur mesure pour les PME sénégalaises.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <a href="https://guedj1.github.io/Cicario/" class="text-light text-decoration-underline me-4">Accueil</a>
+                    <a href="faq.html" class="text-light text-decoration-underline">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
