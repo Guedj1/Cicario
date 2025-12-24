@@ -121,6 +121,193 @@
             scroll-margin-top: 80px; /* Pour l'ancre avec navbar fixe */
         }
     </style>
+    /* ================================================== */
+/* DÉCORATIONS SERVICES - NE PAS MODIFIER L'EXISTANT */
+/* ================================================== */
+
+/* 1. TITRE DE SECTION SCINTILLANT */
+#services h2.text-center {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 60px !important;
+}
+
+#services h2.text-center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        #3498db, 
+        #e74c3c, 
+        #3498db, 
+        transparent);
+    border-radius: 2px;
+    animation: titleUnderline 3s infinite ease-in-out;
+}
+
+@keyframes titleUnderline {
+    0%, 100% { width: 150px; opacity: 0.8; }
+    50% { width: 200px; opacity: 1; }
+}
+
+/* 2. CARTES DE SERVICES AMÉLIORÉES */
+#services .col-md-4 .text-center.p-4 {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 25px !important;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet de brillance au survol */
+#services .col-md-4 .text-center.p-4:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.15);
+    border-color: #3498db;
+}
+
+/* Bordure lumineuse animée */
+#services .col-md-4 .text-center.p-4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(52, 152, 219, 0.1), 
+        transparent);
+    transition: left 0.7s;
+}
+
+#services .col-md-4 .text-center.p-4:hover::before {
+    left: 100%;
+}
+
+/* 3. ICÔNES ANIMÉES */
+#services .feature-icon {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+#services .col-md-4 .text-center.p-4:hover .feature-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Halo lumineux autour des icônes */
+#services .feature-icon i {
+    position: relative;
+    z-index: 2;
+}
+
+#services .feature-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, 
+        rgba(52, 152, 219, 0.2) 0%, 
+        transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+#services .col-md-4 .text-center.p-4:hover .feature-icon::after {
+    opacity: 1;
+}
+
+/* 4. TITRES COLORÉS */
+#services .col-md-4 .text-center.p-4 h4 {
+    font-size: 1.5rem;
+    margin: 20px 0 15px;
+    color: #2c3e50;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+#services .col-md-4 .text-center.p-4 h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #3498db;
+    transition: width 0.4s ease;
+}
+
+#services .col-md-4 .text-center.p-4:hover h4::after {
+    width: 100%;
+}
+
+/* 5. COULEURS PAR SERVICE */
+/* Chatbots - Bleu */
+#services .col-md-4:nth-child(1) .feature-icon {
+    color: #3498db;
+}
+#services .col-md-4:nth-child(1) h4::after {
+    background: #3498db;
+}
+#services .col-md-4:nth-child(1) .text-center.p-4:hover {
+    border-color: #3498db;
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.2);
+}
+
+/* Automatisation - Orange */
+#services .col-md-4:nth-child(2) .feature-icon {
+    color: #e67e22;
+}
+#services .col-md-4:nth-child(2) h4::after {
+    background: #e67e22;
+}
+#services .col-md-4:nth-child(2) .text-center.p-4:hover {
+    border-color: #e67e22;
+    box-shadow: 0 20px 40px rgba(230, 126, 34, 0.2);
+}
+
+/* Analyse - Vert */
+#services .col-md-4:nth-child(3) .feature-icon {
+    color: #27ae60;
+}
+#services .col-md-4:nth-child(3) h4::after {
+    background: #27ae60;
+}
+#services .col-md-4:nth-child(3) .text-center.p-4:hover {
+    border-color: #27ae60;
+    box-shadow: 0 20px 40px rgba(39, 174, 96, 0.2);
+}
+
+/* 6. RESPONSIVE */
+@media (max-width: 768px) {
+    #services h2.text-center {
+        margin-bottom: 40px !important;
+    }
+    
+    #services .col-md-4 .text-center.p-4 {
+        padding: 25px 20px !important;
+        margin-bottom: 20px;
+    }
+    
+    #services .col-md-4 .text-center.p-4:hover {
+        transform: translateY(-8px);
+    }
+}
 </head>
 <body>
     <!-- Navigation -->
