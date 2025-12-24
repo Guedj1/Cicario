@@ -358,6 +358,264 @@
         transform: translateY(-8px);
     }
     }
+    /* ================================================== */
+/* TITRE PRINCIPAL ANIMÉ AVEC ROBOT ET DRAPEAU */
+/* ================================================== */
+
+/* Conteneur principal du titre */
+.navbar-brand {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 15px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8));
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+}
+
+/* Animation de fond scintillant */
+.navbar-brand::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 70%
+    );
+    animation: shine 3s infinite linear;
+    z-index: 0;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* Robot clignotant */
+.robot-head {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: #2c3e50;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Yeux du robot */
+.robot-eyes {
+    display: flex;
+    gap: 8px;
+    margin-top: -5px;
+}
+
+.robot-eye {
+    width: 8px;
+    height: 8px;
+    background: #3498db;
+    border-radius: 50%;
+    animation: blink 2s infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.robot-eye::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+}
+
+@keyframes blink {
+    0%, 45%, 55%, 100% { height: 8px; }
+    48%, 52% { height: 1px; }
+}
+
+/* Bouche souriante */
+.robot-mouth {
+    position: absolute;
+    bottom: 8px;
+    width: 15px;
+    height: 5px;
+    border-bottom: 3px solid #e74c3c;
+    border-radius: 0 0 50% 50%;
+    animation: smile 4s infinite ease-in-out;
+}
+
+@keyframes smile {
+    0%, 100% { width: 15px; }
+    50% { width: 18px; }
+}
+
+/* Antennes */
+.robot-antenna {
+    position: absolute;
+    top: -8px;
+    width: 2px;
+    height: 8px;
+    background: #e74c3c;
+    border-radius: 2px;
+}
+
+.robot-antenna.left {
+    left: 10px;
+    transform: rotate(-20deg);
+}
+
+.robot-antenna.right {
+    right: 10px;
+    transform: rotate(20deg);
+}
+
+.robot-antenna::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -1px;
+    width: 4px;
+    height: 4px;
+    background: #f1c40f;
+    border-radius: 50%;
+    animation: antennaGlow 2s infinite alternate;
+}
+
+@keyframes antennaGlow {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Drapeau du Sénégal */
+.senegal-flag {
+    position: relative;
+    width: 40px;
+    height: 25px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: transform 0.3s ease;
+    margin-left: 5px;
+}
+
+.senegal-flag:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Bandes verticales du drapeau */
+.flag-stripe {
+    position: absolute;
+    height: 100%;
+    width: 33.33%;
+}
+
+.green-stripe {
+    left: 0;
+    background: #00853f;
+}
+
+.yellow-stripe {
+    left: 33.33%;
+    background: #fd0;
+}
+
+.red-stripe {
+    right: 0;
+    background: #e31b23;
+}
+
+/* Étoile verte */
+.flag-star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #00853f;
+    font-size: 12px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* Animation de flottement du drapeau */
+.senegal-flag::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, 
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 70%);
+    animation: flagWave 4s infinite ease-in-out;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+@keyframes flagWave {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-3px) rotate(1deg); }
+}
+
+/* Texte CICARIO */
+.brand-text {
+    font-weight: bold;
+    font-size: 1.8rem;
+    background: linear-gradient(90deg, #fff, #3498db, #fff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: textShimmer 3s infinite linear;
+    z-index: 1;
+}
+
+@keyframes textShimmer {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-brand {
+        padding: 5px 10px;
+        gap: 8px;
+    }
+    
+    .robot-head {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .senegal-flag {
+        width: 35px;
+        height: 22px;
+    }
+    
+    .brand-text {
+        font-size: 1.5rem;
+    }
+    }
     </style>
 </head>
 <body>
